@@ -5,10 +5,12 @@ from importlib import import_module
 from scrapy import signals
 from scrapy.exceptions import NotConfigured
 from scrapy.http import HtmlResponse
+import undetected_chromedriver as uc
 from selenium.webdriver.support.ui import WebDriverWait
 
 from .http import SeleniumRequest
 
+uc.install()
 
 class SeleniumMiddleware:
     """Scrapy middleware handling the requests using selenium"""
